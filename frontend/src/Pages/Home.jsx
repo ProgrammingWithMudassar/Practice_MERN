@@ -1,13 +1,11 @@
 import React from 'react'
-import {
-  Header
-} from '../Components/index.js'
+import { Header } from '../Components/index.js'
 import Typography from '@mui/material/Typography'
 
 const Home = () => {
   return (
     <>
-      <Header />
+      <Typography variant="body1" color="initial">Home</Typography>
     </>
   )
 }

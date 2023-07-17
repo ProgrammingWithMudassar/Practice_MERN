@@ -1,0 +1,27 @@
+.input{
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 1px 6px 5px #e4e4e4;
+    margin-bottom: 10px;
+    border: none;
+}
+.input_VC{
+    padding: 4px 8px;
+    height: 28px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 1px 6px 5px #e4e4e4;
+    margin-bottom: 2px;
+    text-align: center;
+}
+.input_VC::-webkit-inner-spin-button,
+.input_VC::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+.input_VC[type="number"] {
+  -moz-appearance: textfield;
+}

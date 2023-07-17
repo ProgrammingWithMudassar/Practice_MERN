@@ -1,18 +1,35 @@
-import { useState } from 'react'
 import './App.css'
-import Button from '@mui/material/Button'
-import { Home } from './Pages/index'
+import {
+  Home, Login, SignUp
+} from './Pages/index'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import PrivateRoutes from './Utils/PrivateRoute.jsx'
+import { Navbar } from './Components/index'
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      Well Mudassar G.
-      <Button variant="contained" color="primary">
-        click me
-      </Button>
-      <Home />
+      <Router>
+        <Navbar />
+        <Routes>
+
+          {/* public route */}
+          <Route exact path='/login' element={<Login />} />
+          <Route exact path='/signUp' element={<SignUp />} />
+
+
+
+          {/* private route */}
+          <Route path='/' element={<PrivateRoutes />} >
+            <Route exact path="/allow" element={<Home />} />
+          </Route>
+
+
+
+        </Routes>
+      </Router>
     </div>
   )
 }
